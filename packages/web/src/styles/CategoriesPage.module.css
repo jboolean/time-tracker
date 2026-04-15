@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--bg);
+  background: transparent;
 }
 
 .wheelInner {

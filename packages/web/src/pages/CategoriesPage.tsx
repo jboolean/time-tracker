@@ -259,7 +259,7 @@ export default function CategoriesPage() {
 
   return (
     <div className={styles.page}>
-      <div className={styles.toolbar}>
+      <div className={`${styles.toolbar} surface`}>
         <span className={styles.toolbarTitle}>Categories</span>
         <button onClick={() => setShowNewModal(true)} className={styles.newBtn}>
           + New Category
@@ -344,13 +344,13 @@ export default function CategoriesPage() {
       {/* New category modal */}
       {showNewModal && (
         <div className={styles.modalOverlay} onClick={(e) => { if (e.target === e.currentTarget) setShowNewModal(false); }}>
-          <div className={styles.modal}>
+          <div className={`${styles.modal} surface`}>
             <h3 className={styles.modalTitle}>New Category</h3>
             <p className={styles.modalHint}>Drag the node on the wheel to pick its color.</p>
             <form onSubmit={handleNewSubmit} className={styles.modalForm}>
               <label className={styles.label}>
                 Name
-                <input required autoFocus value={newName} onChange={(e) => setNewName(e.target.value)}
+                <input required autoFocus id="new-category-name" name="category-name" autoComplete="off" value={newName} onChange={(e) => setNewName(e.target.value)}
                   className={styles.textInput} />
               </label>
               <label className={styles.label}>
@@ -377,12 +377,12 @@ export default function CategoriesPage() {
       {/* Edit category modal */}
       {editCat && (
         <div className={styles.modalOverlay} onClick={(e) => { if (e.target === e.currentTarget) setEditCat(null); }}>
-          <div className={styles.modal}>
+          <div className={`${styles.modal} surface`}>
             <h3 className={styles.modalTitle}>Edit Category</h3>
             <form onSubmit={handleEditSave} className={styles.modalForm}>
               <label className={styles.label}>
                 Name
-                <input required autoFocus value={editName} onChange={(e) => setEditName(e.target.value)}
+                <input required autoFocus id="edit-category-name" name="category-name" autoComplete="off" value={editName} onChange={(e) => setEditName(e.target.value)}
                   className={styles.textInput} />
               </label>
               <div className={styles.modalActions}>

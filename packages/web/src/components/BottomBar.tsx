@@ -93,7 +93,7 @@ export default function BottomBar() {
   }
 
   return (
-    <div className={styles.bar}>
+    <div className={`${styles.bar} surface`}>
       <form onSubmit={handleSubmit} className={styles.form}>
         <input
           type="text"

@@ -206,7 +206,7 @@ export default function CalendarPage() {
       className={styles.page}
       ref={containerRef}
     >
-      <div className={styles.toolbar}>
+      <div className={`${styles.toolbar} surface`}>
         <button onClick={handlePrev} className="btn btn-sm">← Prev</button>
         <button onClick={handleToday} className="btn btn-sm">Today</button>
         <button onClick={handleNext} className="btn btn-sm">Next →</button>
@@ -232,7 +232,7 @@ export default function CalendarPage() {
         <div className={styles.weekBody}>
           <div className={styles.weekScroll}>
             <div className={styles.weekGrid}>
-              <div className={styles.dayHeaders}>
+              <div className={`${styles.dayHeaders} surface`}>
                 <div className={styles.timeGutter} />
                 {weekDays.map((day, i) => (
                   <div
@@ -290,7 +290,7 @@ export default function CalendarPage() {
 
       {view === "month" && (
         <div className={styles.monthWrapper}>
-          <div className={styles.dowHeader}>
+          <div className={`${styles.dowHeader} surface`}>
             {DOW_LABELS.map((d) => (
               <div key={d} className={styles.dowCell}>{d}</div>
             ))}
@@ -308,7 +308,7 @@ export default function CalendarPage() {
                   return (
                     <div
                       key={di}
-                      className={`${styles.monthDayCell} ${isToday ? styles.monthDayCellToday : ""}`}
+                      className={`${styles.monthDayCell} surface ${isToday ? styles.monthDayCellToday : ""}`}
                     >
                       <span
                         className={`${styles.monthDayNumber} ${isToday ? styles.monthDayNumberToday : ""} ${!inMonth ? styles.monthDayNumberDim : ""}`}

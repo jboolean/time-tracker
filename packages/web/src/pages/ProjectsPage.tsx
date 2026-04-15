@@ -124,7 +124,7 @@ export default function ProjectsPage() {
     return (
       <div
         key={project.id}
-        className={styles.projectCard}
+        className={`${styles.projectCard} surface`}
         style={{ borderLeftColor: accentColor }}
       >
         <div className={styles.projectBody}>
@@ -222,7 +222,7 @@ export default function ProjectsPage() {
       )}
 
       {showForm && (
-        <form onSubmit={handleCreateProject} className={styles.newForm}>
+        <form onSubmit={handleCreateProject} className={`${styles.newForm} surface`}>
           <h3>New Project</h3>
 
           <div className={styles.formRow}>

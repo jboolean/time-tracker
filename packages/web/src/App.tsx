@@ -8,7 +8,7 @@ import styles from "./styles/App.module.css";
 export default function App() {
   return (
     <div className={styles.root}>
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} surface`}>
         <NavLink
           to="/"
           end
