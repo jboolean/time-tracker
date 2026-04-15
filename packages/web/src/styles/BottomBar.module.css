@@ -1,0 +1,76 @@
+.bar {
+  height: var(--bottom-bar-height);
+  display: flex;
+  align-items: stretch;
+  padding: 10px 16px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.form {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  flex: 1;
+  max-width: 600px;
+}
+
+/* .form-input provides the visual; this adds layout */
+.input {
+  flex: 1;
+}
+
+.dtWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.dtDisplay {
+  font-size: var(--font-sm);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.dtInput {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.activeTask {
+  margin-left: auto;
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  flex-shrink: 0;
+  max-width: 420px;
+}
+
+.activeTaskName {
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+  font-style: italic;
+  align-self: center;
+}
+
+/* .btn provides the visual; this adds layout constraints */
+.endBtn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}

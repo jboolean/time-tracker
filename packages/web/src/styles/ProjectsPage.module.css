@@ -1,0 +1,176 @@
+.page {
+  height: 100%;
+  overflow: auto;
+  padding: 16px;
+  background: var(--bg);
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.error {
+  color: var(--error);
+  margin-bottom: 12px;
+  font-size: var(--font-sm);
+}
+
+/* New project form */
+.newForm {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: var(--font-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.labelFlex {
+  flex: 1 1 160px;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* Category group */
+.categoryGroup {
+  margin-bottom: 24px;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.categoryDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.categoryName {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Project card */
+.projectCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left-width: 3px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.projectBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.projectName {
+  font-weight: 400;
+  padding: 2px 4px;
+  border-radius: 3px;
+  cursor: text;
+}
+
+.projectName:hover {
+  background: var(--bg);
+}
+
+.projectDesc {
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+  margin-top: 2px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  cursor: text;
+}
+
+.projectDesc:hover {
+  background: var(--bg);
+}
+
+.projectDescPlaceholder {
+  color: #aaa;
+}
+
+/* Inline edit — distinct from .form-input: accent border, tight padding */
+.editInput {
+  width: 100%;
+  padding: 2px 6px;
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-weight: 400;
+  outline: none;
+}
+
+.editInputDesc {
+  font-size: var(--font-sm);
+  margin-top: 4px;
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  opacity: 0;
+}
+
+.projectCard:hover .cardActions {
+  opacity: 1;
+}
+
+.defaultBadge {
+  font-size: var(--font-xs);
+  padding: 2px 6px;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--accent);
+  border-radius: 10px;
+  font-weight: 400;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.empty {
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 40px;
+}

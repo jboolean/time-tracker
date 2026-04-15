@@ -1,0 +1,39 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.nav {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+/* Nav links are <a> tags — .btn doesn't apply; define once here */
+.navLink {
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+}
+
+.navLink:hover {
+  color: var(--text);
+}
+
+.navLinkActive {
+  color: var(--text);
+  font-weight: 400;
+  border-color: var(--text);
+}
+
+.main {
+  flex: 1;
+  overflow: hidden;
+}

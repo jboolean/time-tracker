@@ -1,0 +1,100 @@
+.popover {
+  position: absolute;
+  z-index: 100;
+  width: 260px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: 400;
+  flex: 1;
+}
+
+/* Icon button — no visible border */
+.closeBtn {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1;
+  margin-left: 8px;
+}
+
+.closeBtn:hover {
+  color: var(--text);
+}
+
+.rawInput {
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.meta {
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metaLabel {
+  color: var(--text);
+}
+
+.activeTag {
+  color: var(--success);
+  font-weight: 300;
+}
+
+.editBtn {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--font-sm);
+}
+
+.fieldLabel {
+  color: var(--text);
+  margin-top: 6px;
+}
+
+.editSelect,
+.editInput {
+  font-size: var(--font-sm);
+  padding: 4px 6px;
+  width: 100%;
+}
+
+.timeError {
+  color: var(--error);
+  font-size: var(--font-xs);
+  margin-top: 4px;
+}
+
+.editActions {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.deleteBtn {
+  margin-left: auto;
+  color: var(--error);
+  border-color: var(--error);
+}
