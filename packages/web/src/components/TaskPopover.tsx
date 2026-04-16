@@ -93,7 +93,7 @@ export default function TaskPopover({
 
   return (
     <div
-      className={styles.popover}
+      className={`${styles.popover} surface`}
       style={{ top, left }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={editing ? undefined : onMouseLeave}
